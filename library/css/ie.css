@@ -1,0 +1,199 @@
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* ==========================================================================
+	Typography
+	========================================================================== */
+body {
+  color: #7d7d7d;
+  font: 25px/30px "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 0 1px transparent;
+}
+
+/*	Headers
+/*--------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  clear: both;
+  margin: 0;
+  color: #858585;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1em;
+  color: #363636;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  color: #34b78f;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+}
+
+h5 {
+  font-size: .8em;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+}
+
+h6 {
+  font-size: .8em;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+}
+
+/* Custom Headers */
+article section h1, article section h2, article section h3, article section h4, article section h5, article section h6 {
+  margin-top: 1em;
+  margin-bottom: 40px;
+}
+
+.home h1, .home h2, .home h3, .home h4, .home h5, .home h6 {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+header.top h1, header.top h2 {
+  line-height: 0;
+}
+
+/*	Text Elements
+/*--------------------------------------*/
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  color: #7d7d7d;
+  height: 1px;
+  border: none;
+  margin: 30px 0;
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+article section p {
+  letter-spacing: 1px;
+}
+
+h1 + p, h1 + ul, h1 + ol, h1 + dl, h2 + p, h2 + ul, h2 + ol, h2 + dl, h3 + p, h3 + ul, h3 + ol, h3 + dl, h4 + p, h4 + ul, h4 + ol, h4 + dl, h5 + p, h5 + ul, h5 + ol, h5 + dl, h6 + p, h6 + ul, h6 + ol, h6 + dl {
+  margin-top: 5px;
+}
+
+ul, ol {
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+li {
+  margin: 0 0 20px 60px;
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal-leading-zero;
+  margin-left: 70px;
+}
+
+cite {
+  font-style: italic;
+}
+
+blockquote {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding: 1px 40px 1px 22px;
+  margin: 30px 0;
+  border-left: 5px solid #b2d1b4;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 1em 0;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin: 0 0 25px 0;
+  font-weight: normal;
+}
+
+/*	Links
+/*--------------------------------------*/
+a:link {
+  text-decoration: none;
+  color: #6ac4a6;
+  font-weight: 700;
+  -webkit-transition: color 0.24s ease-in-out;
+  transition: color 0.24s ease-in-out;
+}
+
+a:hover, a:focus, a:active {
+  color: #2c9575;
+}
+
+a:visited, a:visited {
+  color: #2c9575;
+}
+
+a.btn {
+  padding: 34px 85px;
+  letter-spacing: 1px;
+  background-color: #34b78f;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
+}
+
+a.btn:hover {
+  background-color: #4bd0a7;
+}
+
+/*	Accessibility
+/*--------------------------------------*/
+.skip {
+  float: left;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}

@@ -1,0 +1,62 @@
+//	Transition
+//--------------------------------------*/
+
+// @include transition(background-color 0.14s ease-in-out);
+
+@mixin transition($transition...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes: ("-webkit-", "" );
+	@each $prefix in $prefixes {
+		#{$prefix}transition: $transition;
+	}
+}
+
+//	Border Radius
+//--------------------------------------*/
+
+//	@include border-radius(15px);
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	background-clip: padding-box;  // stops bg color from leaking outside the border
+}
+
+//	Hide Content From Browser Accessibly
+//--------------------------------------*/
+
+//	<b class="visually-hidden">Open the navigation</b>
+//	.visually-hidden { @extend %visuallyhidden; }
+
+%visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute; 
+	width: 1px; 
+}
+
+//	Setting an opacity
+//--------------------------------------*/
+
+//	@include background-opacity(#333, 0.5);
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+//	Clearfix
+//--------------------------------------*/
+
+//  @extend %clearfix;
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

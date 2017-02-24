@@ -1,0 +1,20 @@
+// ******************************************************************
+//	Stylesheet: IE Stylesheet
+//	Supporting IE8 and above
+// ******************************************************************/
+
+// Imports & Dependencies
+// Remember, all the BASE styles are called already since IE can
+// read those. Below, we need to import only the stuff IE can't
+// understand (what's inside the media queries). We also need to
+// import the mixins file so SASS can understand the variables.
+
+@import "partials/variables"; // import variables
+@import "partials/mixins"; // import mixins
+@import "partials/typography"; // import typography
+
+// Additional IE Fixes
+// These fixes are now ONLY seen by IE, so you don't have to worry
+// about using prefixes, although it's best practice. For more info
+// on using Modernizr classes, check out this link:
+// http://www.modernizr.com/docs/

@@ -1,0 +1,635 @@
+/* ==========================================================================
+	Main Styles - Desktop
+	
+	Table of Contents
+	
+	1. Main Containers
+	2. Homepage
+	3. Navigation
+	4. Footer
+	5. Pages/Posts
+	6. Slick Slider
+	7. Other
+	
+	========================================================================== */
+
+/*	1. Main Containers
+/*--------------------------------------*/
+
+#container {
+	width: 100%;
+	overflow: auto;
+	zoom: 1;
+}
+.content, header {
+	max-width: 1280px;
+	margin: 0 auto;
+	@extend %clearfix;
+}
+
+/*	2. Homepage
+/*--------------------------------------*/
+
+.home header {
+	max-width: 100%;
+	height: 825px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	padding: 27px 0;
+	
+	.content h2 {
+		color: white;
+		font-size: 3em;
+		line-height: 1.263em;
+		display: inline-block;
+		padding-top: 65px;
+		padding-bottom: 20px;
+	}
+	.content h2 span {
+		background-color: rgba(0, 66, 119, .8);
+		display: inline-block;
+		padding: 0 20px;
+	}
+	.content h2 span + span {
+		padding-bottom: 15px;
+	}
+}
+.home section {
+	width: 100%;
+	padding: 65px 0;
+	@extend %clearfix;
+	
+	h2 {
+		font-size: 2.2em;
+		color: #363636;
+		text-align: center;
+		padding-bottom: 25px;
+	}
+	hr {
+		width: 305px;
+		margin: 0 auto 65px auto;
+	}
+}
+.home .about {
+	hr {
+		border-top: 3px solid #249ab8;
+	}
+	.col {
+		width: 35%;
+		float: left;
+	}
+	.col + .col {
+		float: right;
+		text-align: right;
+		width: 61%;
+		margin-left: 4%;
+	}
+	p {
+		color: #959595;
+		font-size: 1.12em;
+		line-height: 1.2em;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	.embed-container { 
+			position: relative; 
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+			height: auto;
+		} 
+	.embed-container iframe,
+	.embed-container object,
+	.embed-container embed { 
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.home .coalition {
+	background-color: #ebebeb;
+	padding-bottom: 90px;
+	
+	hr {
+		border-top: 3px solid #ffb000;
+	}
+	ul {
+		width: 84%;
+		margin: 0 auto;
+	}
+	li {
+		list-style: none;
+		margin: 0;
+		height: 65px;
+	}
+}
+.home .news {
+	padding-bottom: 0;
+	
+	hr {
+		border-top: 3px solid #b2d1b4;
+	}
+	ul {
+		@extend %clearfix;
+		
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			padding: 80px 35px 0 35px;
+			display: inline-block;
+			background-color: #034a84;
+			height: 340px;
+			width: 30%;
+			float: left;
+			letter-spacing: 1px;
+			color: white;
+			@include transition(background-color 0.24s ease-in-out);
+			overflow-y: hidden;
+		}
+		a + a {
+			background-color: #004277;
+			width: 30%;
+		}
+		a + a + a {
+			background-color: #003057;
+			width: 40%;
+		}
+		a + a + a + a {
+			background-color: #003057;
+			width: 40%;
+		}
+		a + a + a + a + a {
+			background-color: #034a84;
+			width: 30%;
+		}
+		a + a + a + a + a + a {
+			background-color: #004277;
+			width: 30%;
+		}
+		a:hover {
+			background-color: #045fa9;
+		}
+	}
+	span {
+		text-transform: uppercase;
+	}
+	h3 {
+		font-size: 1.12;
+		text-transform: none;
+		color: white;
+	}
+	p {
+		font-size: .8em;
+		font-weight: 400;
+		margin-bottom: .5em;
+	}
+	.content {
+		text-align: center;
+		margin: 0 auto;
+	}
+	a.btn {
+		margin: 20px auto;
+	}
+}
+
+/*	3. Navigation
+/*--------------------------------------*/
+
+header.top {
+	h1, h2 {
+		line-height: 0;
+		float: left;
+		display: inline-block;
+		clear: left;
+	}
+}
+header.top, footer {
+	nav {
+		float: right;
+		clear: right;
+		max-width: 900px;
+	}
+	nav ul, nav ul {
+		padding: 0;
+		margin: 0;
+		float: right;
+	}
+	nav ul li {
+		display: inline-block;
+		list-style: none;
+		text-transform: uppercase;
+		margin: 0 40px 0 0;
+	}
+}
+header.top {
+	nav {
+		padding-top: 100px;
+	}
+	nav ul li a:link, 
+	nav ul li a:active, 
+	nav ul li a:focus, 
+	nav ul li a:visited {
+		color: white;
+		letter-spacing: 1px;
+		display: inline-block;
+	}
+	nav ul li a:hover {
+		color: #003057;
+	}
+	nav .facebook, nav .twitter {
+		margin: 0!important;
+		color: white;
+		font-size: .8em;
+		@include transition(color 0.24s ease-in-out);
+		
+		&:hover {
+			color: #003057;
+		}
+	}
+	nav .facebook a, nav .twitter a {
+		text-indent: 200%;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 25px;
+		margin-left: -25px;
+	}
+}
+footer {
+	nav ul li a:link,
+	nav ul li a:focus, 
+	nav ul li a:active,
+	nav ul li a:visited {
+		color: #959595;
+		letter-spacing: 1px;
+		display: inline-block;
+	}
+	nav ul li a:hover {
+		color: #34b78f;
+	}
+	nav .facebook, nav .twitter {
+		margin: 0!important;
+		color: #959595;
+		font-size: .8em;
+		@include transition(color 0.24s ease-in-out);
+		
+		&:hover {
+			color: #34b78f;
+		}
+	}
+	nav .facebook a, nav .twitter a {
+		text-indent: 200%;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 25px;
+		margin-left: -25px;
+	}
+}
+
+/*	4. Footer
+/*--------------------------------------*/
+
+footer {
+	padding: 85px 0 140px 0;
+	background-color: #ebebeb;
+	width: 100%;
+	margin: 0 auto;
+	@extend %clearfix;
+
+	.logo {
+		width: 178px;
+		height: auto;
+		float: left;
+		clear: left;
+	}
+	.copyright {
+		clear: right;
+		float: right;
+		margin-top: 100px;
+		color: #acacac;
+		width: 40%;
+		text-align: right;
+		
+		p {
+			margin-bottom: 15px;
+		}
+	}
+	ul.footer-nav {
+		position: relative;
+		margin-top: 65px;
+		
+		.contact a {
+			color: #34b78f;
+			font-weight: 700;
+		}
+		ul.sub-menu {
+			position: absolute;
+			font-size: .8em;
+			
+			li {
+				display: block;
+			}
+			a:link {
+				font-weight: 600;
+				text-transform: none;
+				color: #959595;
+			}
+			a:hover {
+				color: #34b78f;
+			}
+		}
+	}
+	ul.copyright-links {
+		li {
+			margin-right: 0;
+		}
+		li + li {
+			margin-left: 40px;
+		}
+		a:link {
+			color: #acacac;
+			text-transform: none;
+		}
+		a:hover {
+			color: #34b78f;
+		}
+	}
+}
+.home footer {
+	background-color: white;
+}
+
+/*	5. Pages/Posts
+/*--------------------------------------*/
+
+.page-template-default.page header.top, .post-template-default.single header.top, .archive header.top {
+	max-width: 100%;
+	height: 430px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	padding: 27px 0;
+	margin-bottom: 80px;
+	background-color: #bcbcbc;
+	//background-image: url('../images/header-image.jpg');
+}
+article header {
+	text-align: center;
+	margin-bottom: 100px;
+	
+	hr {
+		width: 305px;
+		margin: 40px auto;
+		border-top: 3px solid #b2d1b4;
+	}
+}
+article section {
+	width: 90%;
+	margin-bottom: 100px;
+	@extend %clearfix;
+	
+	img {
+		max-width: 100%;
+	}
+}
+.archive {
+	header.top {
+		background: url('../images/header-image.jpg') no-repeat center top;
+	}
+	article header {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	hr {
+		width: 305px;
+		margin: 40px auto;
+		border-top: 3px solid #b2d1b4;
+	}
+	hr:last-of-type {
+		display: none;
+	}
+	.page-title {
+		margin-bottom: 40px;
+	}
+}
+nav.pagination {
+	text-align: center;
+	
+	li {
+		list-style: none;
+		display: inline-block;
+	}
+}
+.alignleft, img.alignleft {
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+	display: inline;
+	float: left;
+}
+.alignright, img.alignright {
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+	display: inline;
+	float: right;
+}
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1.5em;
+	display: block;
+	clear: both;
+}
+
+/*	6. Slick Slider
+/*--------------------------------------*/
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    
+    .slick-arrow {
+    	text-indent: 100%;
+    	white-space: nowrap;
+    	overflow: hidden;
+    	width: 43px;
+    	height: 43px;
+    	//display: inline-block;
+    	position: absolute;
+    	display: block;
+    	line-height: 0px;
+    	font-size: 0px;
+    	cursor: pointer;
+    	background: transparent;
+    	color: transparent;
+    	top: 50%;
+    	-webkit-transform: translate(0, -50%);
+    	-ms-transform: translate(0, -50%);
+    	transform: translate(0, -50%);
+    	padding: 0;
+    	border: none;
+    	outline: none;
+    }
+    .previous {
+    	background: url('../images/left-arrow.png') no-repeat center bottom;
+    	left: -65px;
+    	
+    	[dir="rtl"] & {
+    	    left: auto;
+    	    right: -65px;
+    	}
+    }
+    .next {
+    	background: url('../images/right-arrow.png') no-repeat center bottom;
+    	right: -65px;
+    	
+    	[dir="rtl"] & {
+    	    left: -65px;
+    	    right: auto;
+    	}
+    }    
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    list-style: none;
+    position: relative;
+    
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+    .slick-initialized & {
+        display: block;
+    }
+    .slick-loading & {
+        visibility: hidden;
+    }
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*	7. Other
+/*--------------------------------------*/
+
+// Social Font
+@font-face {
+	font-family: "socicon";
+	src:url("../fonts/socicon.eot");
+	src:url("../fonts/socicon.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/socicon.woff") format("woff"),
+	url("../fonts/socicon.ttf") format("truetype"),
+	url("../fonts/socicon.svg#socicon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[data-icon]:before {
+	font-family: "socicon" !important;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+	font-family: "socicon" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+header.top .socicon-facebook:before, footer .socicon-facebook:before {
+  content: "\e041";
+}
+header.top .socicon-twitter:before, footer .socicon-twitter:before {
+  content: "\e040";
+}

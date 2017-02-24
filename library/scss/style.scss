@@ -1,0 +1,45 @@
+/******************************************************************
+Site Name: NRDC Coalition
+Author: Lucian Tucker
+
+Stylesheet: Main Stylesheet
+
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// import mixins
+@import "partials/mixins";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+//	Screen Sizes
+//--------------------------------------*/
+
+// Main
+@import "breakpoints/main";
+
+// Mobile Devices Base
+@media only screen and (max-width: 1280px) {
+	@import "breakpoints/base";
+}
+// Large Viewing Size
+@media only screen and (min-width: 1440px) {
+	// styles in 1440up.scss
+	@import "breakpoints/1240up";
+}

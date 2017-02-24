@@ -1,0 +1,119 @@
+body#tinymce.wp-editor {
+
+	// normalize: http://necolas.github.io/normalize.css/
+	@import "partials/normalize";
+
+	// Sass variables
+	@import "partials/variables";
+
+	// import mixins
+	@import "partials/mixins";
+
+	// typography
+	@import "partials/typography";
+
+	// Sass functions
+	@import "partials/functions";
+
+	width: 731px;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #7d7d7d;
+	-webkit-font-smoothing: antialiased;
+
+  /*********************
+	LINK STYLES
+	*********************/
+
+	a, a:visited {
+		color: #6ac4a6;
+
+		/* on hover */
+		&:hover, &:focus {
+			color: #2c9575;
+		}
+
+		/* on click */
+		&:active {
+		}
+
+		&:link {
+			-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+		}
+	}
+
+	/******************************************************************
+	H1, H2, H3, H4, H5 STYLES
+	******************************************************************/
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+		text-rendering: optimizelegibility;
+		font-weight: 500;
+		a {
+			text-decoration: none;
+		}
+	}
+	blockquote {
+		font-size: 1.2em;
+		line-height: 1.5em;
+		padding: 1px 40px 1px 22px;
+		margin: 30px 0;
+		border-left: 5px solid #b2d1b4;
+		font-style: italic;
+		
+		p {
+			margin: 1em 0;
+		}
+	}
+
+	img {
+		margin: 0 0 1.5em 0;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		max-width: 100%;
+		height: auto;
+	}
+
+	pre {
+		background: $black;
+		color: $light-gray;
+		font-size: 0.9em;
+		padding: 1.5em;
+		margin: 0 0 1.5em;
+		border-radius: 3px;
+	}
+
+	/*********************
+	LARGER MOBILE DEVICES
+	This is for devices like the Galaxy Note or something that's
+	larger than an iPhone but smaller than a tablet. Let's call them
+	tweeners.
+	*********************/
+	@media only screen and (min-width: 481px) {
+
+		/* at this larger size, we can start to align images */
+		.alignleft, img.alignleft {
+			margin-right: 1.5em;
+			display: inline;
+			float: left;
+		}
+		.alignright, img.alignright {
+			margin-left: 1.5em;
+			display: inline;
+			float: right;
+		}
+		.aligncenter, img.aligncenter {
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			clear: both;
+		}
+	}
+}

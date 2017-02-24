@@ -1,0 +1,181 @@
+/* ==========================================================================
+	Typography
+	========================================================================== */
+
+body {
+	color: #7d7d7d;
+	// Base font size for the entire site. Every other font size is based off of this via em.
+	font: 25px/30px "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: 0 0 1px transparent;
+}
+
+/*	Headers
+/*--------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	clear: both;
+	margin: 0;
+	color: #858585;
+}
+
+// Using em's to make the size relative to the base font and line height set for the body
+// ex. 25 * 2.2 = 55
+h1 {
+	font-size: 2.2em; // 25 * 2.2 = 55px
+	line-height: 1.1em;
+	color: #363636;
+}
+h2 {
+	font-size: 1.4em;
+	line-height: 1.2em;
+	color: #34b78f;
+}
+h3 {
+	font-size: 1em; 
+	line-height: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+h4 {
+	font-size: 1em;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+}
+h5 {
+	font-size: .8em;
+	line-height: 1.3em;
+	letter-spacing: 1px;
+}
+h6 {
+	font-size: .8em;
+	line-height: 1.3em;
+	letter-spacing: 1px;
+}
+
+/* Custom Headers */
+article section {
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 1em;
+		margin-bottom: 40px;
+	}
+}
+.home {
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+		margin-bottom: .5em;
+	}
+}
+header.top {
+	h1, h2 {
+		line-height: 0;
+	}
+}
+
+/*	Text Elements
+/*--------------------------------------*/
+
+strong {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+hr {
+	color: #7d7d7d;;
+	height: 1px;
+	border: none;
+	margin: 30px 0;
+}
+p {
+	margin: 0 0 1.5em 0;
+}
+article section p {
+	letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6 {
+	+ p, + ul, + ol, + dl {
+		margin-top: 5px;
+	}
+}
+ul, ol {
+	padding: 0;
+	margin-bottom: 40px;
+}
+li {
+	margin: 0 0 20px 60px;
+	list-style-type: disc;
+}
+ol li {
+	list-style-type: decimal-leading-zero;
+	margin-left: 70px;
+}
+cite {
+	font-style: italic;
+}
+blockquote {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	padding: 1px 40px 1px 22px;
+	margin: 30px 0;
+	border-left: 5px solid #b2d1b4;
+	font-style: italic;
+	
+	p {
+		margin: 1em 0;
+	}
+}
+figcaption {
+	font-style: italic; 
+}
+dt {
+	font-weight: 600;
+}
+dd {
+	margin: 0 0 25px 0;
+	font-weight: normal;
+}
+
+/*	Links
+/*--------------------------------------*/
+
+a:link {
+	text-decoration: none;
+	color: #6ac4a6;
+	font-weight: 700;
+	@include transition(color 0.24s ease-in-out);
+}
+a:hover, a:focus, a:active {
+	color: #2c9575;
+}
+a:visited, a:visited {
+	color: #2c9575;
+}
+a.btn {
+	padding: 34px 85px;
+	letter-spacing: 1px;
+	background-color: #34b78f;
+	color: white;
+	text-transform: uppercase;
+	display: inline-block;
+	@include transition(background-color 0.24s ease-in-out);
+}
+a.btn:hover {
+	background-color: #4bd0a7;
+}
+
+/*	Accessibility
+/*--------------------------------------*/
+
+// Accessible way to hide text
+.hidden {
+	@extend %visuallyhidden;
+}
+.skip {
+	float: left;
+}
+.skip:focus {
+	position: static;
+	width: auto;
+	height: auto;
+} 
